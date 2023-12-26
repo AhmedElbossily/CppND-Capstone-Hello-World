@@ -5,6 +5,8 @@ add_definitions(-std=c++17)
 set(CXX_FLAGS "-Wall")
 set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
 
-project(HelloWorld)
+project(Sampling)
 
-add_executable(HelloWorld src/main.cpp)
+add_subdirectory(matplotplusplus)
+add_executable(Sampling src/main.cpp)
+target_link_libraries(Sampling PUBLIC matplot)
